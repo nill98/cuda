@@ -1,0 +1,574 @@
+/* ========================= */
+/* BASIC SETUP */
+/* ========================= */
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Titillium Web', sans-serif;
+    text-rendering: optimizeLegibility;
+    line-height: 1.3;
+    font-size: 1.6rem;
+}
+
+ul li{
+    list-style: none;
+}
+
+/* Heading */
+h1{
+    font-size: 3.8rem;
+    color: #fff;
+}
+
+/* overflow removing */
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+/* ========================= */
+/* REUSABLE COMPONENTS */
+/* ========================= */
+
+.row{
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
+section{
+    padding: 8rem 0;
+}
+
+h2{
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-align: center;
+}
+/* small line */
+h2::after{
+    content: "";
+    display: block;
+    height: .4rem;
+    background-color: #c8d9e5;
+    
+    width: 8.5rem;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+h3{
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.box{
+    padding: 1%;
+}
+.box p{
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.btn:link,
+.btn:visited,
+.btn{
+    background: steelblue;
+    border-bottom: steelblue .3rem solid;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    height: 6.5rem;
+    width: 29rem;
+    font-weight: 500;
+    padding: 2.2rem 5rem;
+    border-radius: .3rem;
+    display: inline-block;
+    margin-top: 4.5rem;
+    font-size: 1.8rem;
+}
+
+/* little discription p tag */ 
+.little-description{
+    font-size: 1.8rem;
+    width: 60%;
+    margin-left:20% ;
+    line-height: 3rem;
+}
+/* ========================= */
+/* Header Section */
+/* ========================= */
+
+header{
+    background: linear-gradient( rgb(135, 80, 156,0.9) , rgb(135, 80, 156,0.9) ), url(img/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    height: 85vh;
+    position: relative;
+}
+
+.logo{
+    height: 3.5rem;
+    width: auto;
+    margin-top: 1.5rem;
+    float: left;
+}
+/* Main navigation */
+
+nav{
+    background: #4a3fe2;
+    position:sticky;
+    top: 0;
+    z-index: 999;
+    padding: 1rem 0;
+    height: 10rem;
+}
+
+.main-nav{
+    float: right;
+    margin-top: 2rem;
+}
+
+.main-nav li{
+    display: inline-block;
+    margin-left: 1rem;
+}
+.main-nav li:first-child{
+    margin-left: 0;
+}
+.main-nav li a:link,
+.main-nav li a:visited{
+    color: #fff;
+    text-decoration: none;
+    background: rgba(100, 58, 121 , 0);
+    padding: .6rem 1.6rem;
+    border-radius: .3rem;
+    display: inline-block;
+    font-size: 1.6rem;
+    transition: .3s;
+}
+
+
+ .main-nav li:hover a:link,
+.main-nav li:hover a:visited{
+    background: rgba(100, 58, 121 , 1);
+}
+
+.main-nav li.active a{
+    background: rgba(100, 58, 121 , 1);
+}
+
+/*sticky navigation*/
+
+
+
+.hero-text-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.btn-hero:link,
+.btn-hero:visited{
+    background: #eb7d4b;
+    border-color: #c86a40;
+}
+
+/* ========================= */
+/* Services Section */
+/* ========================= */
+
+.services-section{
+    color: #fff;
+    text-align: center;
+    background:linear-gradient( rgb(23, 194, 164, 0.9) , rgb(23, 194, 164, 0.9) ), url(img/services-bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top;
+    background-size: cover;
+}
+.services-section h2::after{
+    background: #14a58c ;
+    
+}
+.services-icon{
+    height: 12rem;
+    margin-top: 5rem;
+    margin-bottom: 3.5rem;
+}
+
+
+
+/* ========================= */
+/* Team Section */
+/* ========================= */
+
+
+.team-section{
+    background: linear-gradient(rgb(231, 241, 248, 0.9) ,rgb(231, 241, 248, 0.9) ), url(img/team-bg.jpg);
+    text-align: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top;
+    background-size: cover;
+}
+
+.team-section h2{
+    color: #3c4761;
+    font-family:'Titillium Web', sans-serif;
+    font-weight: bold;
+    font-size: 4.1rem;
+}
+
+.team-section h2::after{
+    background: #c8d9e5;
+}
+
+.role{
+    color: #30bae7;
+    font-size: 1.6rem;
+    
+}
+
+/* round shape */
+.team-member{
+    margin-top: 5rem;
+    margin-bottom: 3.5rem;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+}
+.row > img:hover {
+    width: 500px;
+    height: 200px;
+  }
+.team-section h3{
+    color: #3c4761;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.team-section .box p{
+    color: #3c4761;
+    font-size: 1.6rem;
+}
+
+.social-link{
+    margin-top: 2.5rem;
+    
+}
+
+.social-link ul li{
+    display: inline-block;
+    margin:0.5rem;
+}
+
+.social-link ul li a{
+    color: #fff;
+}
+
+.social-link ul li a:link i::before{
+    background: #bdd1df;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 2rem;
+    padding: 1rem;
+    transition: .5s;
+}
+
+.social-link ul li a:hover i::before{
+    background: #393939;
+    transform: rotate(360deg);
+}
+
+
+/* ========================= */
+/* Skills Section */
+/* ========================= */
+
+.skill-section{
+    text-align: center;
+    background: linear-gradient(rgb(255, 255, 255,0.9),rgb(255, 255, 255,0.9)), url(img/skill-bg.jpg);
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.skill-section h2{
+    color: #3c4761;
+    font-family:'Titillium Web', sans-serif;
+    font-weight: bold;
+    font-size: 4.1rem;
+}
+.skill-section h2::after{
+    background: #c8d9e5;
+}
+
+.skill-section .little-description{
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+.skill-section h3{
+    font-weight: bold;
+    font-size: 2.4rem;
+}
+
+.skill-section .box{
+    margin-top: 4.5rem;
+}
+svg.radial-progress circle{
+    stroke-width: 6;
+}
+
+svg.radial-progress text{
+    fill: #3c4761;
+    font-size: 2rem;
+}
+
+svg.web-design circle{
+    stroke: #30bae7;
+}
+
+svg.html-css circle{
+    stroke: #d74680;
+}
+
+svg.graphic-design circle{
+    stroke: #15c7a8
+}
+
+svg.ui-ux circle{
+    stroke: #eb7d4b;
+}
+
+/* ========================= */
+/* Portfolio Section */
+/* ========================= */
+
+.portfolio-section{
+    background:linear-gradient(rgb(255, 221, 153,0.9),rgb(255, 221, 153,0.9)),url(img/portfolio-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.portfolio-section h2{
+    color: #393939;
+}
+
+.portfolio-section h2::after{
+    background:#e5c37f;
+}
+
+.portfolio-section .little-description{
+    color: #393939;
+    font-size: 1.8rem;
+}
+
+.portfolio-filter button{
+    background: #ebc985;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border:0;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    color: #3c4761;
+    margin: 0 .5rem;
+    font-weight: 600;
+}
+.portfolio-filter button:hover{
+    cursor: pointer;
+    box-shadow: inset 0 .5rem .7rem ;
+}
+.portfolio-filter{
+    margin: 4rem 0;
+}
+
+.portfolio-section h4{
+    margin-top: 3rem;
+    margin-bottom: 3.5rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.btn-projects:link,
+.btn-projects:visited{
+    background: #17c2a4;
+    border-color: #14a58c;
+}
+
+
+/* ========================= */
+/* Testimonial Section */
+/* ========================= */
+
+.testimonial-section{
+    background:linear-gradient(rgb(215, 70, 128, .9),rgb(215, 70, 128, .9)),url(img/testimonial-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.testimonial-section h2::after{
+    background: #b73c6d;
+}
+.testimonial-section .little-description{
+    color: #fff;
+    text-align: center;
+}
+.testimonial-section .col:nth-child(3){
+    margin-left: 0;
+}
+.testimonial-section .col{
+    margin-top: 6.5rem;
+}
+
+.client-photo{
+    width: 14rem;
+    float: left;
+}
+.client-photo img{
+    height: 10rem;
+    border-radius: 50%;
+    margin-bottom: 3rem;   
+}
+
+.client-review{
+    width: 35rem;
+    float: left;
+}
+
+.client-review p{
+    text-align: left;
+    margin-top: 0;
+    font-style:italic;
+    font-size: 2.1rem;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.client-review h3{
+    font-weight: bold;
+    color: #fff;
+    font-size: 2.4rem;
+    letter-spacing: .1rem ;
+}
+.client-review span{
+    color: #ffdd99;
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+}
+
+.client-review .role{
+    float: left;
+}
+.client-review h3{
+    text-align: left;
+}
+
+/* ========================= */
+/* Contact Section */
+/* ========================= */
+.contact-section{
+    background: linear-gradient(rgb(60, 84, 153,.9),rgb(60, 84, 153,.9)),url(img/contact-bg.jpg);
+    text-align: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contact-section h2::after{
+    background: #273a71;
+    height: .5rem;
+}
+
+.contact-section .little-description{
+    color: #fff;
+    margin-bottom: 6rem;
+}
+
+.contact-section form{
+    width: 70%;
+    margin-left: 15%;
+}
+
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea{
+    background: #273a71;
+    border: 1rem solid #273a71;
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    color: #fff;
+}
+
+.contact-section form ::placeholder{
+    color: #fff;
+    opacity: 1;
+}
+
+.btn-submit{
+    border: 0;
+    border-bottom: .3rem solid #299ec5;
+    background: #30bae7;
+}
+
+.btn-submit:hover{
+    cursor: pointer;
+}
+
+
+/* ========================= */
+/* Footer Section */
+/* ========================= */
+
+
+.footer-section{
+    background: #344b8e;
+    padding: 3rem 0;
+    text-align: center;
+    border-top: .1rem solid rgb(255, 255, 255,0.3);
+}
+
+.footer-section li{
+    display: inline-block;
+    margin: 0 2rem;
+}
+.footer-section li a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 2.4rem;
+    color: #fff;
+}
+
+.footer-section li a:hover{
+    color: chocolate;
+}
